@@ -23,5 +23,28 @@ SELECT TO_CHAR (SYSDATE,'WW') FROM dual;
 --NEDELIYA GODA
 SELECT TO_CHAR (SYSDATE,'Q') FROM dual;
 --KVARTAL GODA
-SELECT TO_CHAR (SYSDATE,'CC') FROM dual;
+SELECT TO_CHAR (SYSDATE,'cc') FROM dual;
 --VEK
+SELECT TO_CHAR (SYSDATE,'A.M.') FROM dual;
+--vivedi kakoe vremiya do ili posle poludniya
+SELECT TO_CHAR (SYSDATE,'hh24') FROM dual;
+SELECT TO_CHAR (SYSDATE,'mi') FROM dual;
+SELECT TO_CHAR (SYSDATE,'ss') FROM dual;
+SELECT TO_CHAR (SYSDATE,'sssss') FROM dual;
+--sekundi posle polunochi
+SELECT TO_CHAR (SYSDATE,'DAY!Mon?yyyy') FROM dual;
+--variant s punktuachiey
+SELECT TO_CHAR (SYSDATE,'"quarter "q" of "year"') FROM dual;
+--luboy text
+SELECT TO_CHAR (SYSDATE,'DDth "of "mm') FROM dual;
+--th dlya okonchaniya chatie
+SELECT TO_CHAR (SYSDATE,'MmSP Month Yyyysp') FROM dual;
+--sp v konche-vivesti tekstom kak chelovek)
+SELECT TO_CHAR (SYSDATE,'ccthsp') FROM dual;
+--kombo iz verhnih 2h
+SELECT 'my colleague with ID = '||employee_id|| ' and job_id = '||job_id||
+' joined us on '|| to_char(hire_date, 'Day "the "ddTH "of" fmMonth YYYY')
+as data_nayma
+from employees;
+
+SELECT sysdate from dual;
